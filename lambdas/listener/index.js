@@ -1,5 +1,8 @@
+// Copyright 2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// SPDX-License-Identifier: Apache-2.0
+
 'use strict';
-const controller = require('common-lambda-assets/customers-controller.js')
+const controller = require('./_common/customers-controller.js')
 
 console.log("starting listener function")
 
