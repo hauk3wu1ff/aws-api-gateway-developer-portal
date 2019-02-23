@@ -22,6 +22,7 @@ import AlertPopup from 'components/AlertPopup'
 import NavBar from 'components/NavBar'
 
 import { init, login, logout } from 'services/self'
+import { oauth2Redirect } from 'services/oauth2-client';
 import './index.css';
 
 class App extends React.Component {
@@ -51,6 +52,7 @@ class App extends React.Component {
             <Route path="/apis/:apiId" component={Apis} />
             <Route path="/login" render={() => (login(), <Redirect to="/" />)}/>
             <Route path="/logout" render={() => (logout(), <Redirect to="/" />)}/>
+            <Route path="/oauth2-redirect.html" render={() => (oauth2Redirect(), <Redirect to="/" />)}/>
             <Route component={() => <h2>Page not found</h2>} />
           </Switch>
         </React.Fragment>
