@@ -35,6 +35,7 @@ export default observer(class ApisPage extends React.Component {
             plugins: [SwaggerLayoutPlugin],
             supportedSubmitMethods: [],
             spec: api.swagger,
+            oauth2RedirectUrl: `${window.location.protocol}//${window.location.host}/oauth2-redirect.html`,
             onComplete: () => {
               if (store.apiKey)
                 uiHandler.preauthorizeApiKey("api_key", store.apiKey)
